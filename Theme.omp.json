@@ -1,0 +1,159 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+        {
+            "alignment": "left",
+            "segments": [
+                {
+                    "background": "darkGray",
+                    "foreground": "lightCyan",
+                    "leading_diamond": "\ue0c5",
+                    "style": "diamond",
+                    "trailing_diamond": "\ue0b0",
+                    "type": "os"
+                },
+                {
+                    "background": "yellow",
+                    "foreground": "black",
+                    "powerline_symbol": "\ue0b0",
+                    "properties": {
+                        "root_icon": "\ue0a2"
+                    },
+                    "style": "powerline",
+                    "type": "root"
+                },
+                {
+                    "background": "darkGray",
+                    "foreground": "lightCyan",
+                    "powerline_symbol": "\ue0b0",
+                    "style": "powerline",
+                    "type": "session"
+                },
+                {
+                    "background": "magenta",
+                    "foreground": "darkGray",
+                    "powerline_symbol": "\ue0b0",
+                    "properties": {
+                        "time_format": "02/01/2006 15:04:05"
+                    },
+                    "style": "powerline",
+                    "type": "time"
+                },
+                {
+                    "background": "black",
+                    "background_templates": [
+                        "{{ if eq \"Full\" .State.String }}blue{{ end }}",
+                        "{{ if eq \"Charging\" .State.String }}green{{ end }}",
+                        "{{ if eq \"Discharging\" .State.String }}yellow{{ end }}"
+                    ],
+                    "foreground": "black",
+                    "powerline_symbol": "\ue0b0",
+                    "properties": {
+                        "charged_icon": "\ue22f ",
+                        "charging_icon": "\ue234 ",
+                        "discharging_icon": "\ue231 "
+                    },
+                    "style": "powerline",
+                    "type": "battery"
+                },
+                {
+                    "background": "lightCyan",
+                    "foreground": "black",
+                    "powerline_symbol": "\ue0b0",
+                    "properties": {
+                        "folder_icon": "\uf115",
+                        "folder_separator_icon": " \ue0b1",
+                        "home_icon": "\uf7db",
+                        "style": "agnoster_full"
+                    },
+                    "style": "powerline",
+                    "type": "path"
+                },
+                {
+                    "background": "green",
+                    "background_templates": [
+                        "{{ if or (.Working.Changed) (.Staging.Changed) }}yellow{{ end }}"
+                    ],
+                    "foreground": "black",
+                    "template": "{{.UpstreamIcon}}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}} \uF692 {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }}",
+                    "powerline_symbol": "\ue0b0",
+                    "properties": {
+                        "fetch_stash_count": true,
+                        "fetch_status": true,
+                        "fetch_upstream_icon": true,
+                        "tag_icon": "\u25b6 "
+                    },
+                    "style": "powerline",
+                    "type": "git"
+                },
+                {
+                    "background": "#6CA35E",
+                    "foreground": "#ffffff",
+                    "powerline_symbol": "\ue0b0",
+                    "style": "powerline",
+                    "type": "node"
+                },
+                {
+                    "background": "#0077c2",
+                    "foreground": "#ffffff",
+                    "powerline_symbol": "\ue0b0",
+                    "style": "powerline",
+                    "type": "kubectl"
+                },
+                {
+                    "background": "#107210",
+                    "background_templates": [
+                        "{{ if gt .Code 0 }}red{{ end }}"
+                    ],
+                    "foreground": "white",
+                    "leading_diamond": "<transparent>\ue0b0</>",
+                    "properties": {
+                        "always_enabled": true
+                    },
+                    "style": "diamond",
+                    "trailing_diamond": "\ue0b0",
+                    "type": "exit"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "right",
+            "segments": [
+                {
+                    "background": "#0077c2",
+                    "foreground": "#ffffff",
+                    "invert_powerline": true,
+                    "powerline_symbol": "\ue0b2",
+                    "style": "powerline",
+                    "type": "shell"
+                },
+                {
+                    "background": "yellow",
+                    "foreground": "black",
+                    "invert_powerline": true,
+                    "powerline_symbol": "\ue0b2",
+                    "style": "powerline",
+                    "template": " {{ .FormattedMs }} \uf252 ",
+                    "type": "executiontime"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "foreground": "blue",
+                    "style": "plain",
+                    "template": "\u279c",
+                    "type": "text"
+                }
+            ],
+            "type": "prompt"
+        }
+    ],
+    "final_space": true,
+    "version": 2
+}
