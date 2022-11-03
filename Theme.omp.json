@@ -57,6 +57,13 @@
                     "type": "battery"
                 },
                 {
+                    "type": "connection",
+                    "style": "powerline",
+                    "background": "#8822ee",
+                    "foreground": "#222222",
+                    "powerline_symbol": "\uE0B0"
+                },
+                {
                     "background": "lightCyan",
                     "foreground": "black",
                     "powerline_symbol": "\ue0b0",
