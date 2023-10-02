@@ -101,19 +101,18 @@
                     "type": "kubectl"
                 },
                 {
-                    "background": "#107210",
+                    "type": "status",
+                    "style": "diamond",
+                    "foreground": "#ffffff",
+                    "background": "#00897b",
                     "background_templates": [
                         "{{ if .Error }}#e91e63{{ end }}"
                     ],
-                    "foreground": "white",
-                    "leading_diamond": "<transparent>\ue0b0</>",
+                    "trailing_diamond": "",
+                    "template": "<#193549></>  ",
                     "properties": {
-                        "always_enabled": true,
-                        "status_template": "{{ if eq .Code 0 }}\uf00c{{ else }}\uf071 {{ reason .Code }}{{ end }}"
-                    },
-                    "style": "diamond",
-                    "trailing_diamond": "\ue0b0",
-                    "type": "status"
+                        "always_enabled": true
+                    }
                 }
             ],
             "type": "prompt"
