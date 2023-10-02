@@ -101,9 +101,8 @@
                     "type": "kubectl"
                 },
                 {
-                    "background": "#107210",
                     "background_templates": [
-                        "{{ if .Error or .Code gt 0 }}red{{ end }}"
+                        "{{ if .Error } }#e91e63 {{else}} #107210 {{ end }}"
                     ],
                     "foreground": "white",
                     "leading_diamond": "<transparent>\ue0b0</>",
