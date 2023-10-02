@@ -109,7 +109,7 @@
                     "leading_diamond": "<transparent>\ue0b0</>",
                     "properties": {
                         "always_enabled": true,
-                        "status_template": "{{ if eq .Code 0 }}\uf00c{{ else }}\uf071 {{ reason .Code }}{{ end }}"
+                        "status_template": "{{ if eq .Code 0 }}\uf00c{{ else }}\uf071 {{.Code }}{{ end }}"
                     },
                     "style": "diamond",
                     "trailing_diamond": "\ue0b0",
