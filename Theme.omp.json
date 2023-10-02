@@ -103,7 +103,7 @@
                 {
                     "background": "#107210",
                     "background_templates": [
-                        "{{ if .Error }}red{{ end }}"
+                        "{{ if .Error or .Code gt 0 }}red{{ end }}"
                     ],
                     "foreground": "white",
                     "leading_diamond": "<transparent>\ue0b0</>",
