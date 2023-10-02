@@ -103,12 +103,13 @@
                 {
                     "background": "#107210",
                     "background_templates": [
-                        "{{ if .Error }}red{{ end }}"
+                        "{{ if .Code gt 0 }}red{{ end }}"
                     ],
                     "foreground": "white",
                     "leading_diamond": "<transparent>\ue0b0</>",
                     "properties": {
-                        "always_enabled": true
+                        "always_enabled": true,
+                        "status_template": "{{ if eq .Code 0 }}\uf00c{{ else }}\uf071 {{ reason .Code }}{{ end }}"
                     },
                     "style": "diamond",
                     "trailing_diamond": "\ue0b0",
