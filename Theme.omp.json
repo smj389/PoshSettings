@@ -103,7 +103,7 @@
                 {
                     "background": "#107210",
                     "background_templates": [
-                        "{{ if gt .Code 0 }}red{{ end }}"
+                        "{{ if .Error }}red{{ end }}"
                     ],
                     "foreground": "white",
                     "leading_diamond": "<transparent>\ue0b0</>",
@@ -112,7 +112,7 @@
                     },
                     "style": "diamond",
                     "trailing_diamond": "\ue0b0",
-                    "type": "exit"
+                    "type": "status"
                 }
             ],
             "type": "prompt"
