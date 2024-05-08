@@ -7,7 +7,6 @@
                 {
                     "background": "darkGray",
                     "foreground": "lightCyan",
-                    "leading_diamond": "\ue0c5",
                     "style": "diamond",
                     "trailing_diamond": "\ue0b0",
                     "type": "os"
