@@ -15,7 +15,7 @@
           "background": "yellow",
           "foreground": "black",
           "powerline_symbol": "\ue0b0",
-          "properties": {
+          "options": {
             "root_icon": "\ue0a2"
           },
           "style": "powerline",
@@ -32,7 +32,7 @@
           "background": "magenta",
           "foreground": "darkGray",
           "powerline_symbol": "\ue0b0",
-          "properties": {
+          "options": {
             "time_format": "02/01/2006 15:04:05"
           },
           "style": "powerline",
@@ -47,7 +47,7 @@
           ],
           "foreground": "black",
           "powerline_symbol": "\ue0b0",
-          "properties": {
+          "options": {
             "charged_icon": "\ue22f ",
             "charging_icon": "\ue234 ",
             "discharging_icon": "\ue231 "
@@ -59,7 +59,7 @@
           "background": "lightCyan",
           "foreground": "black",
           "powerline_symbol": "\ue0b0",
-          "properties": {
+          "options": {
             "folder_icon": "\uf115",
             "folder_separator_icon": " \ue0b1",
             "home_icon": "\uf015",
@@ -76,7 +76,7 @@
           "foreground": "black",
           "template": "{{.UpstreamIcon}}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}} \uF692 {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }}",
           "powerline_symbol": "\ue0b0",
-          "properties": {
+          "options": {
             "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true,
@@ -107,7 +107,7 @@
           "background_templates": ["{{ if .Error }}red{{ end }}"],
           "trailing_diamond": "\ue0b0",
           "leading_diamond": "<transparent>\ue0b0</>",
-          "properties": {
+          "options": {
             "always_enabled": true,
             "status_template": "{{ if eq .Code 0 }}\uf00c{{ else }}\uf071 {{ reason .Code }} {{.Code}} {{ end }}"
           }
